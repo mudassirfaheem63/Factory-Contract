@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root{font-family:'DM Sans',sans-serif;color:#f3f4f6;background:#090b10;font-synthesis:none;text-rendering:optimizeLegibility}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-width:320px;background:#090b10}
+button,a{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.app-shell{min-height:100vh;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% -20%,rgba(126,91,255,.15),transparent 42%),#090b10}
+.ambient{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(120px);opacity:.12;pointer-events:none}
+.ambient-one{background:#6d4aff;top:300px;left:-280px}.ambient-two{background:#16b8a6;top:680px;right:-320px}
+.topbar{height:78px;max-width:1160px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07);position:relative;z-index:5}
+.brand,.footer-brand{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;gap:10px}
+.brand-mark{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;color:#b8a6ff;background:linear-gradient(145deg,rgba(146,116,255,.25),rgba(95,72,180,.08));border:1px solid rgba(171,149,255,.25)}
+.brand-dot,.footer-brand span{color:#9c83ff}
+.nav-links{display:flex;gap:32px;color:#9295a2;font-size:13px}.nav-links a:hover{color:white}
+.top-actions{display:flex;align-items:center;gap:14px}
+.network-pill{display:flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid #292d38;border-radius:20px;color:#9ea2ae;font:11px 'DM Mono',monospace}
+.network-pill.online{color:#83d9b5;border-color:rgba(83,201,151,.25);background:rgba(47,157,113,.07)}
+.status-dot{width:6px;height:6px;border-radius:50%;background:#737987;display:inline-block}.online .status-dot,.live-label .status-dot,.footer-network .status-dot{background:#52d59c;box-shadow:0 0 9px #52d59c}
+.wallet-button{display:flex;align-items:center;gap:9px;padding:10px 15px;border-radius:10px;background:#f0edff;color:#171222;border:0;font-size:12px;font-weight:700;transition:.2s}
+.wallet-button:hover{background:#dcd3ff;transform:translateY(-1px)}.wallet-button:disabled{opacity:.65;cursor:wait}
+.wallet-button.connected{background:#171923;color:#e5e2f1;border:1px solid #353746}
+.wallet-avatar{width:23px;height:23px;border-radius:8px;display:grid;place-items:center;background:#39304f;color:#c7b7ff}
+.wallet-wrap{position:relative}.wallet-menu{position:absolute;right:0;top:48px;width:220px;padding:8px;background:#171923;border:1px solid #343746;border-radius:12px;box-shadow:0 16px 40px #0008}
+.wallet-menu button{width:100%;display:flex;gap:9px;align-items:center;padding:10px;border:0;background:none;color:#d5d6df;text-align:left;border-radius:7px;font-size:12px}.wallet-menu button:hover{background:#262938}
+.menu-address{font:10px 'DM Mono',monospace;color:#85899a;padding:9px;overflow-wrap:anywhere;border-bottom:1px solid #303342;margin-bottom:4px}
+main{max-width:1060px;margin:auto;padding:0 28px;position:relative;z-index:1}
+.hero{text-align:center;padding:74px 0 48px}
+.eyebrow,.section-kicker{font:10px 'DM Mono',monospace;letter-spacing:.16em;color:#9d8bda}
+.eyebrow{display:flex;align-items:center;justify-content:center;gap:11px;color:#aaa0d3}
+.eyebrow-line{height:1px;width:24px;background:#8f78e6}
+h1{font:600 clamp(42px,6.4vw,68px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-.055em;margin:22px 0 15px}
+.gradient-text{background:linear-gradient(100deg,#c8b8ff 5%,#8e78f4 55%,#66d9ca 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy{color:#999eac;font-size:15px;line-height:1.75;margin:0}
+.hero-tags{display:flex;justify-content:center;gap:21px;margin-top:23px;color:#b5b7c1;font-size:11px}
+.hero-tags span{display:flex;align-items:center;gap:7px}.hero-tags svg{color:#a997ff}
+.dashboard-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(290px,.85fr);gap:18px;align-items:start}
+.panel{background:linear-gradient(145deg,rgba(24,27,38,.96),rgba(17,19,27,.96));border:1px solid #2b2e3b;border-radius:17px;box-shadow:0 18px 60px rgba(0,0,0,.18)}
+.exchange-card{padding:26px}
+.card-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:23px}
+.card-heading h2{font:600 21px 'Space Grotesk',sans-serif;margin:7px 0 0;letter-spacing:-.03em}
+.live-label{display:flex;align-items:center;gap:7px;color:#8acbb0;font:9px 'DM Mono',monospace;letter-spacing:.06em;border:1px solid rgba(82,213,156,.2);background:rgba(82,213,156,.05);padding:7px 9px;border-radius:20px}
+.swap-box,.receive-box{background:#10131b;border:1px solid #2b2e3a;border-radius:13px;padding:17px 18px}
+.swap-label{display:flex;justify-content:space-between;color:#9297a6;font-size:11px}
+.amount-row{display:flex;align-items:center;justify-content:space-between;margin-top:13px}
+.amount{font:600 35px 'Space Grotesk',sans-serif;letter-spacing:-.04em}
+.token-chip{display:flex;align-items:center;gap:8px;background:#242333;border:1px solid #39354f;border-radius:25px;padding:7px 10px;font-size:12px;font-weight:700}
+.coin-icon{width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(140deg,#aa91ff,#6551c9);color:#fff;font:700 12px 'Space Grotesk'}
+.swap-sub{font-size:10px;color:#6f7482;margin-top:3px}
+.swap-arrow{width:31px;height:31px;display:grid;place-items:center;border:4px solid #191c26;border-radius:10px;background:#29243e;color:#b6a4ff;margin:-5px auto;position:relative;z-index:2}
+.receive-box{background:linear-gradient(120deg,#151523,#11151b)}
+.receive-content{display:flex;align-items:center;gap:14px;margin-top:14px}
+.nft-art{width:77px;height:77px;flex-shrink:0;position:relative;display:grid;place-items:center;border-radius:13px;color:#e2d8ff;background:radial-gradient(circle at 50% 45%,#6855a9,#29213e 57%,#171725);border:1px solid #5c4b87;overflow:hidden}
+.nft-art svg{filter:drop-shadow(0 0 10px #d5baff);z-index:1}
+.art-orbit{position:absolute;width:65px;height:25px;border:1px solid #c7b5ff66;border-radius:50%;transform:rotate(-35deg)}
+.orbit-b{transform:rotate(55deg);width:55px;height:68px}.art-star{position:absolute;color:#fff}.star-a{top:10px;right:12px}.star-b{bottom:10px;left:13px}
+.receive-info{display:flex;flex-direction:column;gap:5px;min-width:0}.receive-info strong{font-size:13px}.receive-info>span{font-size:10px;color:#858a99}.receive-info .rarity{display:flex;align-items:center;gap:5px;color:#b6a1ff;font-size:10px}
+.receive-count{margin-left:auto;color:#b7b1ca;font:13px 'DM Mono',monospace}
+.primary-button{width:100%;margin-top:17px;padding:15px 17px;display:flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:11px;background:linear-gradient(100deg,#a892ff,#8271ed);color:#100d1b;font-weight:700;font-size:13px;box-shadow:0 8px 24px rgba(123,99,226,.19);transition:.2s}
+.primary-button:hover{filter:brightness(1.1);transform:translateY(-1px)}.primary-button:disabled{opacity:.6;cursor:wait;transform:none}
+.approval-caption{text-align:center;color:#9295a5;font-size:10px;margin-top:10px}
+.fee-note{display:flex;align-items:center;justify-content:center;gap:7px;color:#777d8c;font-size:10px;margin-top:16px}.fee-note svg{color:#6ebd9c}
+.inline-alert{display:flex;align-items:flex-start;gap:9px;padding:12px;border-radius:9px;font-size:11px;line-height:1.5;margin-top:15px}
+.inline-alert.warning{background:rgba(225,172,77,.08);border:1px solid rgba(225,172,77,.2);color:#e5c58d}.inline-alert svg{flex-shrink:0}
+.inline-alert code{color:#f1d9a9}
+.side-column{display:flex;flex-direction:column;gap:18px}
+.stats-card,.how-card{padding:22px}
+.stats-title{font:600 19px 'Space Grotesk',sans-serif;margin:7px 0 19px}
+.stat-row{display:flex;align-items:center;gap:12px}
+.stat-icon{width:39px;height:39px;display:grid;place-items:center;border-radius:12px}
+.token-stat{background:#30284a;color:#c3adff;font:700 17px 'Space Grotesk',sans-serif}.nft-stat{background:#1b3938;color:#81d8c9}
+.stat-copy{display:flex;flex-direction:column;gap:4px}.stat-copy span{font-size:10px;color:#898e9d}.stat-copy strong{font:600 15px 'Space Grotesk',sans-serif}
+.stat-chain{margin-left:auto;color:#747a89;font:9px 'DM Mono',monospace;border:1px solid #333746;border-radius:5px;padding:4px 6px}
+.stat-divider{height:1px;background:#2c303b;margin:17px 0}
+.refresh-button{margin-top:18px;width:100%;display:flex;justify-content:center;align-items:center;gap:7px;background:#202330;color:#b9bbc7;border:1px solid #333746;border-radius:8px;padding:9px;font-size:10px}.refresh-button:hover:not(:disabled){background:#292d3d}.refresh-button:disabled{opacity:.45;cursor:not-allowed}
+.how-card h3{font:600 18px 'Space Grotesk',sans-serif;margin:7px 0 17px}
+.step{display:flex;gap:12px;padding:12px 0;border-top:1px solid #2a2d39}.step-number{font:11px 'DM Mono',monospace;color:#a995ff;padding-top:2px}.step strong{font-size:11px}.step p{font-size:10px;line-height:1.5;color:#858a99;margin:4px 0 0}
+.notice{margin-top:18px;padding:14px 16px;border-radius:12px;display:flex;align-items:flex-start;gap:12px;border:1px solid #3a3d4a;background:#171a24}
+.notice.success{border-color:#285744;background:#10231d}.notice.error{border-color:#683a40;background:#28171b}.notice.warning{border-color:#66522d;background:#261f13}.notice.pending{border-color:#49406d;background:#1d1930}
+.notice-icon{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#ffffff0c;color:#bba9ff;flex-shrink:0}.notice.success .notice-icon{color:#6de0a6}.notice.error .notice-icon{color:#ff8f9a}
+.notice-copy{display:flex;flex-direction:column;gap:4px;min-width:0}.notice-copy strong{font-size:12px}.notice-copy span{font-size:11px;color:#a4a8b5;line-height:1.5;overflow-wrap:anywhere}.notice-copy a{display:flex;align-items:center;gap:5px;color:#b8a5ff;font-size:10px;margin-top:3px}
+.notice-close{margin-left:auto;background:none;border:0;color:#8d91a0;padding:3px}
+.minted-banner{margin-top:18px;padding:15px 17px;display:flex;align-items:center;gap:13px;border-color:#385c50;background:linear-gradient(100deg,#14251f,#171a25)}
+.minted-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#244638;color:#85e0b4}.minted-banner div:nth-child(2){display:flex;flex-direction:column;gap:4px}.minted-banner strong{font-size:12px}.minted-banner span{font-size:10px;color:#9baea5}.minted-banner>a{margin-left:auto;color:#b8a5ff;font-size:10px;display:flex;gap:5px;align-items:center}
+.bottom-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:23px 0 56px;padding:17px 20px;border:1px solid #292d38;border-radius:13px;background:#11141c}
+.bottom-strip>div{display:flex;align-items:center;gap:10px}.bottom-icon{width:32px;height:32px;display:grid;place-items:center;border-radius:9px;background:#242238;color:#a995ff;flex-shrink:0}
+.bottom-strip>div:nth-child(2) .bottom-icon{background:#1b302f;color:#75cbb7}.bottom-strip>div:nth-child(3) .bottom-icon{background:#342b20;color:#d7ae72}
+.bottom-strip span:last-child{display:flex;flex-direction:column;gap:4px}.bottom-strip strong{font-size:10px}.bottom-strip small{font-size:9px;color:#858a98}
+footer{max-width:1160px;margin:auto;padding:20px 28px 28px;border-top:1px solid #252833;display:flex;align-items:center;gap:18px;color:#707584;font-size:10px;position:relative;z-index:1}
+.footer-brand{font-size:13px;color:#dfe0e7}.footer-network{margin-left:auto;display:flex;align-items:center;gap:7px;font:9px 'DM Mono',monospace;letter-spacing:.08em}
+.spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:760px){.topbar{padding:0 18px;height:68px}.nav-links{display:none}.network-pill{display:none}main{padding:0 17px}.hero{padding:58px 0 35px}.dashboard-grid{grid-template-columns:1fr}.side-column{display:grid;grid-template-columns:1fr 1fr}.exchange-card{padding:20px}.card-heading{gap:10px}.live-label{font-size:8px}.bottom-strip{margin-bottom:35px}}
+@media(max-width:520px){.hero{padding-top:48px}.eyebrow{font-size:8px;letter-spacing:.1em}.hero-copy{font-size:13px}.hero-tags{gap:11px;flex-wrap:wrap;font-size:9px}.side-column{grid-template-columns:1fr}.card-heading h2{font-size:18px}.live-label{padding:6px}.bottom-strip{grid-template-columns:1fr;gap:14px}.bottom-strip>div{padding-bottom:9px;border-bottom:1px solid #292d38}.bottom-strip>div:last-child{border:0;padding-bottom:0}.minted-banner{align-items:flex-start;flex-wrap:wrap}.minted-banner>a{margin-left:53px}footer{padding:18px;gap:10px;flex-wrap:wrap}.footer-network{width:100%;margin-left:0}.brand{font-size:16px}.wallet-button{padding:9px 11px;font-size:10px}}

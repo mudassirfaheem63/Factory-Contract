@@ -1,0 +1,53 @@
+{
+  "info": {
+    "name": "Token-to-NFT Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/health"
+      }
+    },
+    {
+      "name": "Get wallet nonce",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/auth/nonce/0x0000000000000000000000000000000000000001"
+      }
+    },
+    {
+      "name": "Verify wallet signature",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"walletAddress\":\"0x0000000000000000000000000000000000000001\",\"message\":\"PASTE_EXACT_MESSAGE_FROM_NONCE_ENDPOINT\",\"signature\":\"PASTE_METAMASK_SIGNATURE\"}"
+        },
+        "url": "http://localhost:5000/api/auth/verify"
+      }
+    },
+    {
+      "name": "List NFTs",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/nfts"
+      }
+    },
+    {
+      "name": "List transactions",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/transactions"
+      }
+    }
+  ]
+}

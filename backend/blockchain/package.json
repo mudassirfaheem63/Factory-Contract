@@ -1,0 +1,21 @@
+{
+  "name": "token-nft-hardhat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:local": "hardhat ignition deploy ignition/modules/TokenNFT.ts",
+    "deploy:sepolia": "hardhat ignition deploy ignition/modules/TokenNFT.ts --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.0",
+    "@types/node": "^22.13.10",
+    "dotenv": "^16.4.7",
+    "hardhat": "^3.22.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.7.0"
+  }
+}
